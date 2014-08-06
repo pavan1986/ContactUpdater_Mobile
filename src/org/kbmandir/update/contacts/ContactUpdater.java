@@ -136,7 +136,7 @@ public class ContactUpdater {
 				if (spreadsheetEntry.getTitle().getPlainText()
 						.equals(googleAccessData.googleDocName)) {
 					addRow(service, spreadsheetEntry, contactData);
-					break;
+					return true;
 				}
 			}
 
@@ -148,7 +148,7 @@ public class ContactUpdater {
 			return false;
 		}
 
-		return true;
+		return false;
 
 	}
 
