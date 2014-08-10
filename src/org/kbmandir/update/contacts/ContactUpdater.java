@@ -40,48 +40,44 @@ public class ContactUpdater {
 				configProperties.getProperty("google_password"),
 				configProperties.getProperty("goodle-doc-title"));
 
-		// prepare contact to be added: add contact#1
-		ContactData contactData1 = new ContactData();
-		contactData1.dateString = "1/1/2014";
-		contactData1.firstName = "Sudarshan";
-		contactData1.lastName = "Krishna";
-		contactData1.email = "sudarshan.krishna@gmail.com";
-		contactData1.phone = "4085053069";
-		contactData1.likeToVolunteer = true;
-		contactData1.comments = "This is a test comment!";
-		// add contact#1
-		addRow(googleAccessData, contactData1);
-		PostMan.sendMail(new PostManData(googleAccessData.googleUsername,
-				googleAccessData.googlePassword, contactData1.email));
+		String ihfThankyouSenderEmail = configProperties
+				.getProperty("ihf_thankyou_sender_email");
+		String ihfThankyouSenderPassword = configProperties
+				.getProperty("ihf_thankyou_sender_password");
 
-		// prepare contact to be added: add contact#2
-		ContactData contactData2 = new ContactData();
-		contactData2.dateString = "1/1/2014";
-		contactData2.firstName = "abhay";
-		contactData2.lastName = "charan";
-		contactData2.email = "abhay.charan@gmail.com";
-		contactData2.phone = "4081234567";
-		contactData2.likeToVolunteer = true;
-		contactData2.comments = "This is another test comment!";
-
-		// add contact#2
-		addRow(googleAccessData, contactData2);
-		PostMan.sendMail(new PostManData(googleAccessData.googleUsername,
-				googleAccessData.googlePassword, contactData2.email));
-
-		// prepare contact to be added: add contact#3
-		ContactData contactData3 = new ContactData();
-		contactData3.dateString = "1/1/2014";
-		contactData3.firstName = "Seshu";
-		contactData3.lastName = "Cl";
-		contactData3.email = "seshucl@gmail.com";
-		contactData3.phone = "1324567890";
-		contactData3.likeToVolunteer = true;
-		contactData3.comments = "This is seshu's comments";
-		// add contact#3
-		addRow(googleAccessData, contactData3);
-		PostMan.sendMail(new PostManData(googleAccessData.googleUsername,
-				googleAccessData.googlePassword, contactData3.email));
+		/*
+		 * // prepare contact to be added: add contact#1 ContactData
+		 * contactData1 = new ContactData(); contactData1.dateString =
+		 * "1/1/2014"; contactData1.firstName = "Sudarshan";
+		 * contactData1.lastName = "Krishna"; contactData1.email =
+		 * "sudarshan.krishna@gmail.com"; contactData1.phone = "4085053069";
+		 * contactData1.likeToVolunteer = true; contactData1.comments =
+		 * "This is a test comment!"; // add contact#1 addRow(googleAccessData,
+		 * contactData1); PostMan.sendMail(new
+		 * PostManData(googleAccessData.googleUsername,
+		 * googleAccessData.googlePassword, contactData1.email));
+		 * 
+		 * // prepare contact to be added: add contact#2 ContactData
+		 * contactData2 = new ContactData(); contactData2.dateString =
+		 * "1/1/2014"; contactData2.firstName = "abhay"; contactData2.lastName =
+		 * "charan"; contactData2.email = "abhay.charan@gmail.com";
+		 * contactData2.phone = "4081234567"; contactData2.likeToVolunteer =
+		 * true; contactData2.comments = "This is another test comment!";
+		 * 
+		 * // add contact#2 addRow(googleAccessData, contactData2);
+		 * PostMan.sendMail(new PostManData(googleAccessData.googleUsername,
+		 * googleAccessData.googlePassword, contactData2.email));
+		 * 
+		 * // prepare contact to be added: add contact#3 ContactData
+		 * contactData3 = new ContactData(); contactData3.dateString =
+		 * "1/1/2014"; contactData3.firstName = "Seshu"; contactData3.lastName =
+		 * "Cl"; contactData3.email = "seshucl@gmail.com"; contactData3.phone =
+		 * "1324567890"; contactData3.likeToVolunteer = true;
+		 * contactData3.comments = "This is seshu's comments"; // add contact#3
+		 * addRow(googleAccessData, contactData3); PostMan.sendMail(new
+		 * PostManData(googleAccessData.googleUsername,
+		 * googleAccessData.googlePassword, contactData3.email));
+		 */
 
 		// prepare contact to be added: add contact#4
 		ContactData contactData4 = new ContactData();
@@ -94,8 +90,9 @@ public class ContactUpdater {
 		contactData4.comments = "This is vamshi's comments";
 		// add contact#4
 		addRow(googleAccessData, contactData4);
-		PostMan.sendMail(new PostManData(googleAccessData.googleUsername,
-				googleAccessData.googlePassword, contactData4.email));
+
+		PostMan.sendMail(new PostManData(ihfThankyouSenderEmail,
+				ihfThankyouSenderPassword, contactData4));
 
 	}
 
