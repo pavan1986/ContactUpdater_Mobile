@@ -62,7 +62,7 @@ public class PostMan {
 			message.setText("Hare Krishna "
 					+ MiscUtils
 							.capitalizeFirstLetter(postManData.contactData.firstName)
-					+ ",\n\nThank you for registering with Sri Krishna Balaram Mandir. We hope you had a wonderful time at our temple and participate more in our activities.\nYou will start receiving festival and special event invites of this temple.\n\nFor more information, please visit us at our web-site: http://www.kbmandir.org and visit us on facebook: http://www.facebook.com/kbmandir\n\nAt your service,\nExecutive committee\nSri Krishna Balarama Mandir\nIndia Heritage Foundation\nServing the mission of His Divine Grace A.C.Bhaktivedanta Swami Prabhupada");
+					+ ",\n\nThank you for registering with Sri Krishna Balaram Mandir. We hope you had a wonderful time at our temple and participate more in our activities.\nYou will start receiving festival and special event invites of this temple.\n\nFor more information, please visit us at our web-site: http://www.kbmandir.org and visit us on facebook: http://www.facebook.com/kbmandir\n\nAt your service,\nExecutive committee\nSri Krishna Balaram Mandir\nIndia Heritage Foundation\nServing the mission of His Divine Grace A.C.Bhaktivedanta Swami Prabhupada");
 
 			System.out.println("Sending email to :"
 					+ postManData.contactData.email);

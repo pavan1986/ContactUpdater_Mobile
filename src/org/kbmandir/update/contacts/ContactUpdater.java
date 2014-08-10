@@ -82,12 +82,12 @@ public class ContactUpdater {
 		// prepare contact to be added: add contact#4
 		ContactData contactData4 = new ContactData();
 		contactData4.dateString = "4/8/2014";
-		contactData4.firstName = "vamshidhar";
-		contactData4.lastName = "boda";
-		contactData4.email = "vgd@ihf-usa.org";
+		contactData4.firstName = "Seshu";
+		contactData4.lastName = "Cheedepudi";
+		contactData4.email = "seshucl@gmail.com";
 		contactData4.phone = "1324567980";
 		contactData4.likeToVolunteer = true;
-		contactData4.comments = "This is vamshi's comments";
+		contactData4.comments = "This is tests comments";
 		// add contact#4
 		addRow(googleAccessData, contactData4);
 
